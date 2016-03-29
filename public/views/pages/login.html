@@ -1,0 +1,37 @@
+<div class="top-content loginPage">
+   <div class="inner-bg">
+      <div class="container">
+         <div class="row">
+            <div class="col-sm-6 col-sm-offset-3 form-box">
+               <div class="form-top">
+                  <div class="form-top-left">
+                     <h1>Login</h1>
+                     <p>Login to dashboard</p>
+                  </div>
+                  <div class="form-top-right">
+                     <i class="fa fa-line-chart"></i>
+                  </div>
+
+               </div>
+               <strong class="btn btn-danger btn-block" ng-show="showLoginFailed">Wrong Username Or Password</strong>
+               <div class="form-bottom">
+                  <form role="form" class="login-form">
+                     <div class="form-group">
+                        <label class="sr-only" for="form-username">Username</label>
+                        <input type="text" name="form-username" placeholder="Username..." class="form-username form-control" id="form-username" ng-model="login.userName">
+                     </div>
+                     <div class="form-group">
+                        <label class="sr-only" for="form-password">Password</label>
+                        <input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password" ng-model="login.password">
+                     </div>
+                     <button type="submit" class="btn btn-success" ng-click="loginUser()">Sign in!</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div id="spinner" ng-show="isProcessing">
+</div>

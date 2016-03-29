@@ -1,0 +1,22 @@
+<div class="col-md-12">
+
+  <div class="col-md-10">
+    <uib-tabset active="active">
+    <uib-tab index="0" heading="Overview">Overview</uib-tab>
+    <uib-tab index="$index + 1" ng-repeat="thing in things" heading="{{thing.name}}" active="tab.active" disable="tab.disabled" ng-click="callApiForGettingData(thing.thing_key)">
+      <h5>This is the pane for {{thing.name}}</h5>
+      <span>{{message}}</span>
+    </uib-tab>
+  </uib-tabset>
+  <div class="my-chart">
+  <linechart data="graphData" options="option1"></linechart>
+</div>
+
+  <hr />
+  </div>
+  <div class="col-md-2">
+
+  </div>
+</div>
+<div id="spinner" ng-show="isProcessing">
+</div>
